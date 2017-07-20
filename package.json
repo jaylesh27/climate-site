@@ -1,0 +1,33 @@
+{
+  "name": "climate-site",
+  "version": "1.0.0",
+  "description": "A site that will help a user determine his/her carbon impact.  User carbon impact info will also be anonymously aggregated into a useful graph that will show the carbon impact of all the users.  The site is also a source of other climate change related info.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaylesh27/climate-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaylesh27/climate-site/issues"
+  },
+  "homepage": "https://github.com/jaylesh27/climate-site#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.13.0",
+    "sequelize": "^4.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "nightmare": "^2.10.0"
+  }
+}
