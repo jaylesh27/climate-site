@@ -16,6 +16,7 @@ $(document).ready(function(){
 
 
 	// Energy Information Administration API key
+	// move this Ajax request to the back-end and use the request package
 	var apiKeyEIA = "7882b2fd823072e0b0de8790db627f59";
 
 	function energyInfoAdmin(){
