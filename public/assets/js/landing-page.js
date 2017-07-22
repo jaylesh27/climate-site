@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+	//Carousel pause / start
+	$(function () {
+    	$('#homeCarousel').carousel({
+        	interval:2000,
+        	pause: "false"
+    	});
+    $('#playButton').click(function () {
+        $('#homeCarousel').carousel('cycle');
+    	});
+    $('#pauseButton').click(function () {
+        $('#homeCarousel').carousel('pause');
+    	});
+	});
+
+
 	// Energy Information Administration API key
 	var apiKeyEIA = "7882b2fd823072e0b0de8790db627f59";
 
