@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Carbon Footprint</title>
+    <!-- for mobile-responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS reset file -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.primap.com/MapCollection/en/Free/Map%20Globe%20(Europe-centered)%20Vegetation%204000x4000.PNG"/>
+    <!-- CDN for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <style>
+    h2{
+        margin-bottom:50px;
+        padding-top:20px;
+    }
+    p{
+        margin-bottom:25px;
+    }
+    button{
+        padding-top:20px;
+    }
+    #header-text{
+        font-family: 'Archivo Black', sans-serif;
+        font-size:50px;
+        padding-bottom:10px;
+    }
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align:center;
+    }
+    .modal-content {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        height:50%;
+        margin: auto;
+    }
+    .carousel-caption {
+    position: absolute;
+    top:-40px;
+    }
+    #carouselButtons {
+    margin-left: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+    .peopleCarouselImg{
+    max-height:700px;
+    }
+    .overlay{
+    background-color:white;
+    width:45%;
+    height:45%;
+    position: relative;
+    right: 250px;
+    top:25px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size:22px;
+    color:black;
+    margin-right:0px;
+    }
+  .climate-info{
+    height:175px;
+    width:100%;
+    margin-left:50%
+    margin-right:50%;
+    text-align:center;
+    border-style: solid;
+    border-color:black;
+    border-width:1px;
+    position:relative;
+    top:50px;
+    background-image: url("http://www.confectionerynews.com/var/plain_site/storage/images/publications/food-beverage-nutrition/confectionerynews.com/commodities/climate-change-impact-on-cocoa-production-devastating/10425071-3-eng-GB/Climate-change-Impact-on-cocoa-production-devastating_strict_xxl.jpg");
+    background-size: cover;
+    opacity:0.7;
+  }
+  .round-btn{
+    border-radius:50%;
+    border-width:2px;
+    border-color:#66d9ff;
+    margin:5%;
+    font-family: 'Archivo Black', sans-serif;
+    font-size:20px;
+  }
+    .navbar-brand {
+        background: url(http://www.pngmart.com/files/4/Earth-PNG-Pic.png) center / contain no-repeat;
+        width: 100px;
+    }   
+    footer{
+        text-align:center;
+        height: 100px;
+        margin-top:70px;
+        font-family: 'Pacifico', cursive;
+    }
+  @media screen and (max-width:768px){
+    .overlay{
+        visibility:hidden;
+    }
+</style>
+
+</head>
+
+<body>
+<div class = "container-fluid">
+        <div class = "row">
+            <div class="text-center">
+                <h1 id = "header-text">What is Your Carbon Footprint?</h1>
+                    
+            </div>
+        </div>
+<nav class="navbar navbar-inverse navbar-fixed-center" style="background-color:#004080" role="navigation">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href=""></a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" style="background-color:#004080">
+          <li class="active" ><a href="" style="background-color:#142952">Home</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Register</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+          <div class="col-lg-12">
+            <div class="text-center">
+              <h3><b>Log In</b></h3>
+            </div>
+            <form id="ajax-login-form" style="width:300px;" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-7">
+                  <input type="checkbox" tabindex="3" name="remember" id="remember">
+                  <label for="remember"> Remember Me</label>
+                </div>
+                <div class="col-xs-5 pull-right">
+                  <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+<p><center> Answer these questions to figure out your Carbon Footprint. </center></p>
+<form class="form-vertical">
+<fieldset>
+
+<!-- Form Name -->
+<legend>How much is spend on the following utilities per month: 
+</legend>
+
+<!-- Text input-->
+<div class="form-group">
+<td class="align-middle">per month</td>
+  <label class="col-md-4 control-label" for="textinput">Electricity </label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+<td class="align-middle">per month</td>
+  <label class="col-md-4 control-label" for="">Propane</label>  
+  <div class="col-md-4">
+  <input id="" name="" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+<td class="align-middle">per month</td>
+  <label class="col-md-4 control-label" for="textinput">Fuel Oil</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+<td class="align-middle">per month</td>
+  <label class="col-md-4 control-label" for="Natural Gas">Natural Gas</label>  
+  <div class="col-md-4">
+  <input id="Natural Gas" name="Natural Gas" type="text" placeholder="" class="form-control input-md" required="">
+  <span class="help-block">Help</span>  
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+</body>
+
+</html>
