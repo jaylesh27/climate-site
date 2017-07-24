@@ -148,6 +148,23 @@ h2{
   		font-family: 'Pacifico', cursive;
 	}
 
+.map{
+  position:relative;
+  top:75px;
+
+}
+
+#title{
+  font-family: 'Quando', serif;
+  position:relative;
+  top:100px;
+  color:black;
+}
+
+.footer{
+  height:100px;
+  background-color:#ff9999;
+}
 
 
 
