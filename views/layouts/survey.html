@@ -169,10 +169,9 @@
           <!-- /.navbar-collapse -->
       </div>
       <!-- /.container-fluid -->
-    </form>
     </nav>
 <p><center> Answer these questions to figure out your Carbon Footprint. </center></p>
-<form class="form-horizontal">
+<form class="form-vertical">
 <fieldset>
 
 <!-- Form Name -->
@@ -214,7 +213,8 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="Natural Gas">Natural Gas</label>  
   <div class="col-md-4">
-  <input id="Natural Gas" name="Natural Gas" type="text" placeholder="" class="form-control input-md" required="">
+
+  <input id="natgas" name="natgas" type="text" placeholder="" class="form-control input-md" required="">
   </div>
 </div>
 <!-- Button -->
@@ -237,7 +237,16 @@
 <td class="align-middle">mileage per year</td>
   <label class="col-md-4 control-label" for="textinput">Car</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="car1mileage" name="car1mileage" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+<td class="align-middle">mileage per year</td>
+  <label class="col-md-4 control-label" for="textinput">Car 2</label>  
+  <div class="col-md-4">
+  <input id="car2mileage" name="car2mileage" type="text" placeholder="" class="form-control input-md">
     
   </div>
 </div>
@@ -245,9 +254,18 @@
 <!-- Text input-->
 <div class="form-group">
 <td class="align-middle">mileage per year</td>
+  <label class="col-md-4 control-label" for="textinput">Car 3</label>  
+  <div class="col-md-4">
+  <input id="car3mileage" name="car3mileage" type="text" placeholder="" class="form-control input-md">
+    </div>
+    </div>
+
+<!-- Text input-->
+<div class="form-group">
+<td class="align-middle">mileage per year</td>
   <label class="col-md-4 control-label" for="textinput">Public Transportation</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="publicMileage" name="publicMileage" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -257,7 +275,7 @@
 <td class="align-middle">mileage per year</td>
   <label class="col-md-4 control-label" for="textinput">Air Travel</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="airmileage" name="airmileage" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -283,7 +301,7 @@
 <td class="align-middle">per year</td>
   <label class="col-md-4 control-label" for="textinput">Meat/Fish</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="meat" name="meat" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -293,7 +311,7 @@
 <td class="align-middle">per year</td>
   <label class="col-md-4 control-label" for="textinput">Cereals/Bread</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="bread" name="bread" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -303,7 +321,7 @@
 <td class="align-middle">per year</td>
   <label class="col-md-4 control-label" for="textinput">Dairy</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="dairy" name="dairy" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -313,7 +331,7 @@
 <td class="align-middle">per year</td>
   <label class="col-md-4 control-label" for="textinput">Fruits/Vegetables</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="fruit" name="fruit" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -323,7 +341,7 @@
 <td class="align-middle">per year</td>
   <label class="col-md-4 control-label" for="textinput">Others</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="other" name="other" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -349,7 +367,7 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="textinput">Clothing </label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="clothing" name="clothing" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -359,7 +377,7 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="textinput">Appliances/Furniture</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="furniture" name="furniture" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -369,7 +387,7 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="textinput">General Services</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="goods" name="goods" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -379,7 +397,7 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="textinput">Other</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="services" name="services" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -393,7 +411,6 @@
 
 </fieldset>
 </form>
-
 
 </body>
 
