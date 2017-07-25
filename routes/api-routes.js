@@ -12,6 +12,7 @@ module.exports = function(app) {
 	// });
 
 	// this will render the user specific profile that will reflect their carbon impact based upon their survey answers
+
 	// app.get("/user/:id", function(req, res){
 	// 	res.render("/user/:id");
 	// });
@@ -77,5 +78,4 @@ module.exports = function(app) {
 	
 	});
 
-	
 };

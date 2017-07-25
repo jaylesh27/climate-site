@@ -2,18 +2,21 @@ $(document).ready(function(){
 
 	//Carousel pause / start
 	$(function () {
-    	$('#homeCarousel').carousel({
-        	interval:2000,
-        	pause: "false"
+    	$('#myCarousel').carousel({
+        	interval:3000,
+        	pause: "hover"
+    	});
+/*
+    $('#pauseButton').click(function () {
+        $('#myCarousel').carousel('pause');
+        
     	});
     $('#playButton').click(function () {
-        $('#homeCarousel').carousel('cycle');
+        $('#myCarousel').carousel('cycle');
     	});
-    $('#pauseButton').click(function () {
-        $('#homeCarousel').carousel('pause');
-    	});
+    
 	});
-
+*/
 
 	// Energy Information Administration API key
 	// move this Ajax request to the back-end and use the request package
