@@ -7,6 +7,26 @@ var request = require('request');
 // Requiring our models for syncing
 //var db = require("./models");
 
+// National Renewable Energy Laboratory (NREL) API key
+var apiKeyNREL = "arjUPgHBbROrBBBY0dLwofwZ6Lahj7HvgPyZff3q";
+
+var userLocation = "08901";
+
+var requestURL = "https://api.data.gov/nrel/alt-fuel-stations/v1/nearest.json?location=" + userLocation +"&radius=20.0&status=E&fuel_type=ELEC&api_key=" + apiKeyNREL;
+
+request(requestURL, function(error, response, body) {
+  if (!error) {
+    var data = JSON.parse(body);
+
+    var fuelStationsData = data.fuel_stations;
+    //console.log(fuelStationsData);
+    for (var i = 0; i < fuelStationsData.length; i++) {
+    	console.log(fuelStationsData[i].station_name);
+    }
+  }
+});
+
+
 var port = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
