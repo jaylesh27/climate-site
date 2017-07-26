@@ -5,9 +5,10 @@ var exphbs = require("express-handlebars");
 var request = require('request');
 
 // Requiring our models for syncing
-//var db = require("./models");
+var db = require("./models");
 
 // National Renewable Energy Laboratory (NREL) API key
+// server.js is a temporary home for this API call
 var apiKeyNREL = "arjUPgHBbROrBBBY0dLwofwZ6Lahj7HvgPyZff3q";
 
 var userLocation = "08901";
@@ -51,11 +52,11 @@ app.set("view engine", "handlebars");
 
 require('./routes/api-routes.js')(app);
 
-app.listen(port);
+// app.listen(port);
 
-// // Syncing our sequelize models and then starting our express app
-// db.sequelize.sync({ force: true }).then(function() {
-//   app.listen(PORT, function() {
-//     console.log("App listening on PORT " + PORT);
-//   });
-// });
+// Syncing our sequelize models and then starting our express app
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(port, function() {
+    console.log("App listening on PORT " + port);
+  });
+});

@@ -1,5 +1,5 @@
 // This file will contain the sequelize model for the user table
-/*
+
 module.exports = function(sequelize, DataTypes) {
 	var User = sequelize.define("User", {
 		username: {
@@ -19,4 +19,3 @@ module.exports = function(sequelize, DataTypes) {
 	});
 	return User;
 };
-*/
