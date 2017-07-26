@@ -17,6 +17,10 @@ module.exports = function(app) {
 		res.render("user");
 	});
 
+	app.get("/survey", function(req, res){
+		res.render("survey");
+	});
+
 	
 	//this will calculate the carbon footprint based on the user's scores, then add them to the database (hopefully)
 
