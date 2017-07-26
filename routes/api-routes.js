@@ -86,4 +86,17 @@ module.exports = function(app) {
 	
 	});
 
+	// app.post("/newUser", function(req, res){
+
+	// 	console.log("New User:");
+	// 	console.log(req.body);
+
+	// 	User.create({
+	// 		username: req.body.username,
+	// 		password: req.body.password
+	// 	}).then(function(results){
+	// 		res.end();
+	// 	});
+	// });
+
 };
