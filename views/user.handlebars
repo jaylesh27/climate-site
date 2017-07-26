@@ -1,10 +1,13 @@
 <div class = "container-fluid">
-		<div class = "row">
-			<div class="text-center">
-				<h1 id = "header-text">Thank you for taking our survey!</h1>
-					
-			</div>
-		</div>
+    <div class = "row">
+      <div class="text-center">
+        <h1 id = "header-text">Thank you for taking our survey!</h1>
+          
+      </div>
+    </div>
+
+
+
 
 <nav class="navbar navbar-inverse navbar-fixed-center" style="background-color:#004080" role="navigation">
       <div class="container-fluid">
@@ -57,24 +60,67 @@
       <!-- /.container-fluid -->
     </nav>
 
-	<div class = "container-fluid">
-		<div class = "row">
-			<div class="id-div">
-				<h1 id = "header-text2">So, what is YOUR Carbon Footprint?</h1>	
-				<div id = "carbon-image">  <img class="carbon_image" src="http://ib.bioninja.com.au/_Media/carbon-footprint_med.jpeg"></div>
-			</div>
-		</div>
 
-		<div class = "row">
-		<div class="id-div">
-		<h1 id = "header-text2">Survey Highlights and YOUR Impact</h1>	
-				<div id = "survey-image">  <img class="survey_image" src="http://product-management.com/wp-content/uploads/2014/01/product-management-survey.jpg"></div>
-			</div>
-		</div>
 
-		<div class = "row">
-		<div class="id-div">
-				<h1 id = "header-text2">Do you have electric vehicle charging stations in your area?</h1>
+  <div class="panel panel-default">
+    <div class="panel-heading text-center" id = "header-text2">So, what is YOUR Carbon Footprint</div>
+    <div class="text-center"><img class="carbon_image" src="http://ib.bioninja.com.au/_Media/carbon-footprint_med.jpeg"></div>
+    <div class="panel-body id-div"></div>
+  </div>
+
+   <div class="panel panel-default">
+    <div class="panel-heading text-center" id = "header-text2">Survey Highlights and YOUR Impact</div>
+    <div class="text-center"><img class="survey_image" src="http://product-management.com/wp-content/uploads/2014/01/product-management-survey.jpg"></div>
+    <div class="panel-body id-div"></div>
+  </div>
+
+   <div class="panel panel-default">
+    <div class="panel-heading text-center" id = "header-text2">Do you have electric vehicle charging stations in your area?</div>
+    <div class="text-center"><img class="electric_image" src="https://www.theassetguardian.com/wp-content/uploads/2017/02/TAG-CMMS-reducing-carbon-footprint.jpg"></div>
+    <div class="panel-body id-div"></div>
+      <div id = "charging-stations">
+        {{#each chargingStations}}
+          <li>
+            
+          </li>
+        {{/each}}
+        </div>
+      </div>
+       
+
+  <div class="panel panel-default">
+    <div class="panel-heading text-center" id = "header-text2">Energy prices in your state</div>
+    <div class="text-center"><img class="prices_image" src="http://files.clickweb.home.pl/homepl38135/image/69d42918b87981cd61bd0ecae48d91a4.png"></div>
+    <div class="panel-body id-div"></div>
+  </div>
+
+</div>
+
+
+
+  <!--
+  <div class = "container-fluid">
+    <div class = "row">
+      <div class="id-div">
+        <h1 id = "header-text2">So, what is YOUR Carbon Footprint?</h1> 
+        <div id = "carbon-image">  <img class="carbon_image" src="http://ib.bioninja.com.au/_Media/carbon-footprint_med.jpeg"></div>
+      </div>
+    </div>
+  -->
+
+<!--
+    <div class = "row">
+    <div class="id-div">
+    <h1 id = "header-text2">Survey Highlights and YOUR Impact</h1>  
+        <div id = "survey-image">  <img class="survey_image" src="http://product-management.com/wp-content/uploads/2014/01/product-management-survey.jpg"></div>
+      </div>
+    </div>
+-->
+
+<!--
+    <div class = "row">
+    <div class="id-div">
+        <h1 id = "header-text2">Do you have electric vehicle charging stations in your area?</h1>
         <div id = "charging-stations">
         {{#each chargingStations}}
           <li>
@@ -82,13 +128,13 @@
           </li>
         {{/each}}
         </div>
-				<div id = "electric-image">  <img class="electric_image" src="https://www.theassetguardian.com/wp-content/uploads/2017/02/TAG-CMMS-reducing-carbon-footprint.jpg"></div>
-			</div>
-		</div>
+        <div id = "electric-image">  <img class="electric_image" src="https://www.theassetguardian.com/wp-content/uploads/2017/02/TAG-CMMS-reducing-carbon-footprint.jpg"></div>
+      </div>
+    </div>
 
-		<div class = "row">
-		<div class="id-div">
-				<h1 id = "header-text2">Energy prices in your state</h1>	
-				<div id = "prices-image">  <img class="prices_image" src="http://files.clickweb.home.pl/homepl38135/image/69d42918b87981cd61bd0ecae48d91a4.png"></div>
-			</div>
-		</div>
+    <div class = "row">
+    <div class="id-div">
+        <h1 id = "header-text2">Energy prices in your state</h1>  
+        <div id = "prices-image">  <img class="prices_image" src="http://files.clickweb.home.pl/homepl38135/image/69d42918b87981cd61bd0ecae48d91a4.png"></div>
+      </div>
+    </div>
