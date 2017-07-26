@@ -30,7 +30,7 @@
             <div class="text-center">
               <h3><b>Log In</b></h3>
             </div>
-            <form id="ajax-login-form" style="width:300px;" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
+            <form id="ajax-login-form" style="width:300px;" action="" method="post" role="form" autocomplete="off">
             <div class="form-group">
               <label for="username">Username</label>
               <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
@@ -69,7 +69,7 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="textinput">Electricity </label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="electric" name="electric" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -79,7 +79,7 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="">Propane</label>  
   <div class="col-md-4">
-  <input id="" name="" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="propane" name="propane" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -89,7 +89,7 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="textinput">Fuel Oil</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="fuelOil" name="fuelOil" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -99,7 +99,6 @@
 <td class="align-middle">per month</td>
   <label class="col-md-4 control-label" for="Natural Gas">Natural Gas</label>  
   <div class="col-md-4">
-
   <input id="natgas" name="natgas" type="text" placeholder="" class="form-control input-md" required="">
   </div>
 </div>
@@ -127,12 +126,28 @@
     
   </div>
 </div>
+<div class="form-group">
+<td class="align-middle">mpg</td>
+  <label class="col-md-4 control-label" for="textinput"></label>  
+  <div class="col-md-2">
+  <input id="car1mpg" name="car1mpg" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
 <!-- Text input-->
 <div class="form-group">
 <td class="align-middle">mileage per year</td>
   <label class="col-md-4 control-label" for="textinput">Car 2</label>  
   <div class="col-md-4">
   <input id="car2mileage" name="car2mileage" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+<div class="form-group">
+<td class="align-middle">mpg</td>
+  <label class="col-md-4 control-label" for="textinput"></label>  
+  <div class="col-md-2">
+  <input id="car2mpg" name="car2mpg" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -145,6 +160,14 @@
   <input id="car3mileage" name="car3mileage" type="text" placeholder="" class="form-control input-md">
     </div>
     </div>
+    <div class="form-group">
+<td class="align-middle">mpg</td>
+  <label class="col-md-4 control-label" for="textinput"></label>  
+  <div class="col-md-2">
+  <input id="car3mpg" name="car3mpg" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
 
 <!-- Text input-->
 <div class="form-group">
