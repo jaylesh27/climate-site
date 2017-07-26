@@ -1,5 +1,6 @@
 var db = require("../models");
-//var express = require("express");
+var express = require("express");
+
 
 module.exports = function(app) {
 	app.get("/", function(req, res){
@@ -7,11 +8,12 @@ module.exports = function(app) {
 	});
 
 	// this will render the survey for the new user to take when they sign up for the site
-	// app.get("/survey/:id", function(req, res){
-	// 	res.render("/survey/:id")
-	// });
+	app.get("/survey/:id", function(req, res){
+		res.render("/survey/:id")
+	});
 
 	// this will render the user specific profile that will reflect their carbon impact based upon their survey answers
+
 
 	app.get("/user", function(req, res){
 		res.render("user");
@@ -19,6 +21,7 @@ module.exports = function(app) {
 
 	app.get("/survey", function(req, res){
 		res.render("survey");
+
 	});
 
 	
@@ -29,6 +32,7 @@ module.exports = function(app) {
 		//UTILITIES
 
 		var electricEmission=(req.body.electric/0.12)*1.37*12;
+		console.log(electricEmission);
 		var natgasEmission=(req.body.natgas/11.38)*120.61*12;
 		var fuelOilEmission=(req.body.fuelOil/2.586)*22.37*12;
 		var propaneEmission=(req.body.propane/2.39)*12.17*12;
