@@ -76,12 +76,11 @@ module.exports = function(app) {
 	
 	//this will calculate the carbon footprint based on the user's scores, then add them to the database (hopefully)
 
-	app.post("/", function(req, res){
+	app.post("/survey", function(req, res){
 
 		//UTILITIES
 
-		var electricEmission=(req.body.electric/0.12)*1.37*12;
-		console.log(electricEmission);
+		var electricEmission=(req.body.electric/0.12)*1.37*12;		
 		var natgasEmission=(req.body.natgas/11.38)*120.61*12;
 		var fuelOilEmission=(req.body.fuelOil/2.586)*22.37*12;
 		var propaneEmission=(req.body.propane/2.39)*12.17*12;
@@ -109,6 +108,12 @@ module.exports = function(app) {
 		var goodsEmission=(req.body.clothing*338*12*0.0022);
 		var servicesEmission=(req.body.clothing*178*12*0.0022);
 
+		var carbonFootprint=Math.round(electricEmission+natgasEmission+fuelOilEmission+propaneEmission+car1Emission+car2Emission+car3Emission+
+		publicTransportationEmission+airEmission+meatEmission+breadEmission+dairyEmission+fruitEmission+otherEmission+clothingEmission+
+		furnitureEmission+goodsEmission+servicesEmission);
+
+		console.log("Your carbon footprint is: " +carbonFootprint);
+
 		db.Survey.create({
 	      electricEmission: electricEmission,
 	      naturalGasEmission: natgasEmission,
@@ -128,6 +133,7 @@ module.exports = function(app) {
 	      furnitureEmission: furnitureEmission,
 	      goodsEmission: goodsEmission,
 	      servicesEmission: servicesEmission,
+	      carbonFootprint: carbonFootprint
 	    })
 	    .then(function(data) {
 	      res.end();
