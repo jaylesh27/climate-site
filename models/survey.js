@@ -127,6 +127,13 @@ module.exports = function(sequelize, DataTypes) {
 			validate: {
 				//To be added
 			}
+		},
+		carbonFootprint: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			validate: {
+				//To be added
+			}
 		}
 	});
 	return Survey;
