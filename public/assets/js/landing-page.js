@@ -37,21 +37,21 @@ $(document).ready(function(){
 
 	energyInfoAdmin();
 
-	$("#login-submit").on("click", function(event){
-		event.preventDefault();
+	// $("#login-submit").on("click", function(event){
+	// 	event.preventDefault();
 
-		var newUser = {
-			username: $("#username").val().trim(),
-			password: $("#password").val().trim()
-		};
+	// 	var existingUser = {
+	// 		username: $("#username").val().trim(),
+	// 		password: $("#password").val().trim()
+	// 	};
 
-		console.log(newUser);
+	// 	console.log(existingUser);
 
-		$.post("/user/new", newUser);
+	// 	$.get("/user/:id", existingUser);
 
-		$("#username").val("");
-		$("#password").val("");
+	// 	$("#username").val("");
+	// 	$("#password").val("");
 
-	});
+	// });
 
 });
