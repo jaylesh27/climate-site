@@ -3,10 +3,15 @@ var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var exphbs = require("express-handlebars");
 var request = require('request');
+// package used for validating username and password inputs
+var expressValidator = require('express-validator');
+// package for hashing user passwords
+var bcrypt = require('bcrypt');
+// what this line means is the amount of rounds the password goes when it gets hashed
+var saltRounds = 10;
 
 // Requiring our models for syncing
 var db = require("./models");
-
 
 
 var port = process.env.PORT || 3000;
@@ -23,6 +28,8 @@ app.use(express.static("public"));
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
+// this following line must be immediately after any of the bodyParser middlewares! (it is part of the express-validator package)
+app.use(expressValidator());
 
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
