@@ -144,12 +144,11 @@ h2{
 	footer{
 		text-align:center;
 		height: 100px;
-  		margin-top:70px;
-  		font-family: 'Pacifico', cursive;
+  	margin-top:70px;
+  	font-family: 'Pacifico', cursive;
 	}
 
 .map{
-  top:75px;
 
 }
 
@@ -178,4 +177,3 @@ h2{
 	.overlay{
 		visibility:hidden;
   }
-
