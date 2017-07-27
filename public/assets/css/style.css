@@ -166,16 +166,6 @@ h2{
   background-color:#ff9999;
 }
 
-#pauseButton{
-  position:relative;
-  left:300px;
-}
-
-#playButton{
-  position:relative;
-  left:300px;
-}
-
 .panel{
   border-color:black;
   border-width:2px;
