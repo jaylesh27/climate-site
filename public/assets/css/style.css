@@ -149,7 +149,6 @@ h2{
 	}
 
 .map{
-  position:relative;
   top:75px;
 
 }
@@ -157,23 +156,13 @@ h2{
 #title{
   font-family: 'Quando', serif;
   position:relative;
-  top:100px;
+  top:50px;
   color:black;
 }
 
 .footer{
   height:100px;
-  background-color:#ff9999;
-}
-
-#pauseButton{
-  position:relative;
-  left:300px;
-}
-
-#playButton{
-  position:relative;
-  left:300px;
+  background-color:#ff6666;
 }
 
 .panel{
