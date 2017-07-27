@@ -1,6 +1,7 @@
 var db = require("../models");
-var express = require("express");
+var chargingStations = require("../controllers/nrel-data.js");
 
+chargingStations.apiCall();
 
 module.exports = function(app) {
 	app.get("/", function(req, res){
