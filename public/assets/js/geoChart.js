@@ -15,7 +15,7 @@ function tooltipHtml(n, d){ /* function to create html content string in tooltip
   "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
   "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
   "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
-  "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
+  "WI", "MO", "AR", "OK", "KS", "LA", "VA"]
     .forEach(function(d){ 
       var low=Math.round(100*Math.random()), 
         mid=Math.round(100*Math.random()), 
@@ -29,6 +29,7 @@ function tooltipHtml(n, d){ /* function to create html content string in tooltip
   
   d3.select(self.frameElement).style("height", "600px");
 
-  
+
+
 
 });

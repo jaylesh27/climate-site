@@ -117,27 +117,27 @@ h2{
   .electric_image{
     width:15%;
     position:relative;
-    right:400px;
+    right:500px;
   }
 
   .prices_image{
     width:15%;
     position:relative;
     top:25px;
-    left:400px;
+    left:500px;
   }
 
   .carbon_image{
     width:20%;
     position:relative;
-    bottom:10px;
-    right:350px;
+    top:20px;
+    right:450px;
   }
 
   .survey_image{
     width:10%;
     position:relative;
-    left:350px;
+    left:500px;
     top:50px;
   }
 
@@ -149,7 +149,6 @@ h2{
 	}
 
 .map{
-  position:relative;
   top:75px;
 
 }
@@ -157,27 +156,26 @@ h2{
 #title{
   font-family: 'Quando', serif;
   position:relative;
-  top:100px;
+  top:50px;
   color:black;
 }
 
 .footer{
   height:100px;
-  background-color:#ff9999;
+  background-color:#ff6666;
 }
 
-#pauseButton{
-  position:relative;
-  left:300px;
+.panel{
+  border-color:black;
+  border-width:2px;
 }
 
-#playButton{
-  position:relative;
-  left:300px;
+.panel-heading{
+  border-width:4px;
 }
 
   @media screen and (max-width:768px){
 	.overlay{
 		visibility:hidden;
   }
-  
+

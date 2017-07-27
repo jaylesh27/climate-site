@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
 	//Carousel pause / start
-	$(function () {
-    	$('#myCarousel').carousel({
-        	interval:3000,
-        	pause: "hover"
-    	});
+	// $(function () {
+ //    	$('#myCarousel').carousel({
+ //        	interval:3000,
+ //        	pause: "hover"
+ //    	});
 /*
     $('#pauseButton').click(function () {
         $('#myCarousel').carousel('pause');
@@ -36,5 +36,22 @@ $(document).ready(function(){
 	}
 
 	energyInfoAdmin();
+
+	$("#login-submit").on("click", function(event){
+		event.preventDefault();
+
+		var newUser = {
+			username: $("#username").val().trim(),
+			password: $("#password").val().trim()
+		};
+
+		console.log(newUser);
+
+		$.post("/user/new", newUser);
+
+		$("#username").val("");
+		$("#password").val("");
+
+	});
 
 });

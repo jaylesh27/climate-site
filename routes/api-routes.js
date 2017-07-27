@@ -1,6 +1,7 @@
 var db = require("../models");
-var express = require("express");
+var chargingStations = require("../controllers/nrel-data.js");
 
+chargingStations.apiCall();
 
 module.exports = function(app) {
 	app.get("/", function(req, res){
@@ -84,6 +85,19 @@ module.exports = function(app) {
 	      res.end();
 	    });	
 	
+	});
+
+	app.post("/user/new", function(req, res){
+
+		console.log("New User:");
+		console.log(req.body);
+
+		db.User.create({
+			username: req.body.username,
+			password: req.body.password
+		}).then(function(results){
+			res.end();
+		});
 	});
 
 };
