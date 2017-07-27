@@ -47,7 +47,10 @@ $(document).ready(function(){
 
 		console.log(newUser);
 
-		// $.post("/newUser", newUser);
+		$.post("/user/new", newUser);
+
+		$("#username").val("");
+		$("#password").val("");
 
 	});
 
