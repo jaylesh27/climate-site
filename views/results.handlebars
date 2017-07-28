@@ -3,73 +3,60 @@
 <h1>Your Results</h1>
 
 
-<ul>
+
   {{#each Survey}}
-  	<li>{{this.electricEmission}}</li>
+ <h3>Utilities</h3>
+ <ul>  
+  	<li>Your electric emissions are: {{this.electricEmission}}</li>
 
-    <li>{{this.naturalGasEmission}}</li>
+    <li>Your natural gas emissions are: {{this.naturalGasEmission}}</li>
 
-    <li>{{this.fuelOilEmission}}</li>
+    <li>Your fuel oil emissions are: {{this.fuelOilEmission}}</li>
       
-    <li>{{this.propaneEmission}}</li>
+    <li>Your propane Emissions are: {{this.propaneEmission}}</li>
+ </u1>
 
-    <li>{{this.car1Emission}}</li>
+ <h3>Transportation</h3>
+ <u1>
+    <li>Your first car's emissions are: {{this.car1Emission}}</li>
 
-    <li>{{this.car2Emission}}</li>
+    <li>Your second car's emissions are (if applicable): {{this.car2Emission}}</li>
 
-    <li>{{this.car3Emission}}</li>
+    <li>Your third car's emissions are (if applicable): {{this.car3Emission}}</li>
 
-    <li>{{this.publicTransportationEmission}}</li>
+    <li>Your public transportation emissions are: {{this.publicTransportationEmission}}</li>
 
-    <li>{{this.airEmission}}</li>
+    <li>Your air travel emissions are: {{this.airEmission}}</li>
+ </u1>
 
-	<li>{{this.meatEmission}}</li>
+ <h3>Diet</h3>
+ <u1>
+	<li>Your emissions from meat consumption are: {{this.meatEmission}}</li>
 
-	<li>{{this.breadEmission}}</li>
+	<li>Your emissions from bread consumption are: {{this.breadEmission}}</li>
 
-	<li>{{this.dairyEmission}}</li>
+	<li>Your emissions from dairy consumption are: {{this.dairyEmission}}</li>
 
-	<li>{{this.fruitEmission}}</li>
+	<li>Your emissions from fruit and vegetable consumption are: {{this.fruitEmission}}</li>
 
-	<li>{{this.otherEmission}}</li>
+	<li>Your other foods emissions are: {{this.otherEmission}}</li>
+ </u1>
 
-	<li>{{this.clothingEmission}}</li>
+ <h3>Lifestyle</h3>
+ <u1>
+	<li>Your clothing production emissions are: {{this.clothingEmission}}</li>
 
-	<li>{{this.furnitureEmission}}</li>
+	<li>Your furniture emissions are: {{this.furnitureEmission}}</li>
 
-	<li>{{this.goodsEmission}}</li>
+	<li>Your general goods emissions are: {{this.goodsEmission}}</li>
 
-	<li>{{this.servicesEmission}}</li>
+	<li>Your general services emissions are: {{this.servicesEmission}}</li>
+ </u1>
 
-	<li>{{this.carbonFootprint}}</li>
-
-	<li>{{this.carbonFootprint}}</li>
+ <h2>Your carbon footprint, anually, is: {{this.carbonFootprint}}</h2>	
 
   {{/each}}
 
-</ul>
+
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
