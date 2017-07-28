@@ -2,6 +2,21 @@
 
 module.exports = function(sequelize, DataTypes) {
 	var Survey = sequelize.define("Survey", {
+		username: {
+			type: DataTypes.STRING,
+			unique: true,
+			allowNull: false,
+			validate: {
+				len: [4, 80]
+			}
+		},
+		password: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			validate: {
+				len: [8, 300]
+			}
+		},
 		electricEmission: {
 			type: DataTypes.INTEGER,
 			allowNull: false,

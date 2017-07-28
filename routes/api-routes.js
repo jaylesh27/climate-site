@@ -69,14 +69,53 @@ module.exports = function(app) {
 	});
 
 	app.get("/survey", function(req, res){
+
 		res.render("survey");
 
 	});
-
-	
+		
 	//this will calculate the carbon footprint based on the user's scores, then add them to the database (hopefully)
 
 	app.post("/survey", function(req, res){
+		console.log(req.body.password[1], req.body.passwordMatch);
+
+		//LOGIN INFO 
+		// this is the express-validator middleware that will check the username and password inputs; placed here so we can check the inputs before they are stored in the below variables
+		req.checkBody('username', 'Username field cannot be empty.').notEmpty();
+		req.checkBody('username', 'Username must be between 4 and 80 characters').len(4, 80);
+		req.checkBody('password', "Password must be between 8 and 20 characters").len(8, 20);
+		req.checkBody('passwordMatch', "Password must be between 8 and 20 characters").len(8, 20);
+		req.checkBody('passwordMatch', "Passwords don't match, try again.").equals(req.body.password[1]);
+
+		var errors = req.validationErrors();
+		if (errors) {
+			console.log('errors: ' + JSON.stringify(errors));
+
+			// render of the landing page if there is an error, need to create an error page!!
+			res.render("errors", {
+				errors: errors
+			});
+		} else {
+			console.log(req.body);
+			// store the username and password in variables
+			var userName = req.body.username[1];
+			var passWord = req.body.password[1];
+			var passWordMatch = req.body.passwordMatch;
+
+
+			bcrypt.hash(passWord, saltRounds, function(err, hash) {
+
+				db.User.create({
+					username: userName,
+					password: hash
+				}).then(function(err, results){
+					// need to create a model or some kind of notification that shows that the account was created successfully
+					res.redirect("/");
+				});
+				
+				// Store hash in your password DB.
+			});
+		}
 
 		//UTILITIES
 
@@ -115,6 +154,8 @@ module.exports = function(app) {
 		console.log("Your carbon footprint is: " +carbonFootprint);
 
 		db.Survey.create({
+		  username: userName,
+		  password: passWord,
 	      electricEmission: electricEmission,
 	      naturalGasEmission: natgasEmission,
 	      fuelOilEmission: fuelOilEmission,
@@ -135,8 +176,9 @@ module.exports = function(app) {
 	      servicesEmission: servicesEmission,
 	      carbonFootprint: carbonFootprint
 	    })
-	    .then(function(data) {
-	      res.end();
+	    .then(function(data) {	  
+	    	console.log(data.dataValues);  	
+	      res.render("results", data.dataValues);
 	    });	
 	
 	});
