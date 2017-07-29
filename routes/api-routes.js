@@ -88,13 +88,13 @@ module.exports = function(app) {
 
 		db.Survey.findAll({
 			where: {
-				UserId: req.session.passport.user.id
+				UserId: req.session.passport.user
 			}
 		}).then(function(data){
 			    var hbsObject = {
 			      survey: data
 			    };
-			console.log(hbsObject.survey.dataValues);
+			//console.log(hbsObject.survey.dataValues);
 			res.render("user", hbsObject);
 		});
 	});
