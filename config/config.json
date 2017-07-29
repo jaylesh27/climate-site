@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "untitled",
+    "password": "1234",
+    "database": "climate_site_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "koo6ogyfoyjm7onk",
+    "password": "njjh8fk6xzpgoczu",
+    "database": "database_production",
+    "host": "i943okdfa47xqzpy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

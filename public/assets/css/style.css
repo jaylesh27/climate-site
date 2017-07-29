@@ -1,0 +1,193 @@
+h2{
+		margin-bottom:50px;
+		padding-top:20px;
+	}
+
+	p{
+		margin-bottom:25px;
+	}
+
+	button{
+		padding-top:20px;
+	}
+
+	#header-text{
+		font-family: 'Archivo Black', sans-serif;
+		font-size:50px;
+		padding-bottom:10px;
+	}
+
+  #header-text2{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size:30px;
+    padding-bottom:10px;
+  }
+
+	.modal-dialog {
+  		width: 100%;
+  		height: 100%;
+  		margin: 0;
+  		padding: 0;
+  		text-align:center;
+	}
+
+	.modal-content {
+  		height: auto;
+  		min-height: 100%;
+  		border-radius: 0;
+	}
+
+	.carousel-inner > .item > img,
+  	.carousel-inner > .item > a > img {
+     	height:50%;
+     	margin: auto;
+ 	}
+
+    .carousel-caption {
+    position: absolute;
+   	top:-40px;
+  	}
+
+  	#carouselButtons {
+    margin-left: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+
+	.homeCarousel{
+	   max-height:700px;
+  	}
+
+	.overlay{
+  	background-color:white;
+  	width:45%;
+  	height:45%;
+  	position: relative;
+    right: 250px;
+    top:25px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size:22px;
+    color:black;
+    margin-right:0px;
+  	}
+
+  .climate-info{
+  	height:175px;
+  	width:100%;
+  	margin-left:50%
+  	margin-right:50%;
+  	text-align:center;
+  	border-style: solid;
+  	border-color:black;
+  	border-width:1px;
+  	position:relative;
+  	top:50px;
+  	background-image: url("http://www.confectionerynews.com/var/plain_site/storage/images/publications/food-beverage-nutrition/confectionerynews.com/commodities/climate-change-impact-on-cocoa-production-devastating/10425071-3-eng-GB/Climate-change-Impact-on-cocoa-production-devastating_strict_xxl.jpg");
+  	background-size: cover;
+  	opacity:0.7;
+  }
+
+  .round-btn{
+  	border-radius:50%;
+  	border-width:2px;
+  	border-color:#66d9ff;
+  	margin:5%;
+  	font-family: 'Archivo Black', sans-serif;
+  	font-size:20px;
+  }
+
+	.navbar-brand {
+  		background: url(http://www.pngmart.com/files/4/Earth-PNG-Pic.png) center / contain no-repeat;
+  		width: 100px;
+	}	
+
+    .id-div{
+    text-align:center;
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top:50px;
+    width:75%;
+    height:200px;
+    border-style:solid;
+    border-color:black;
+    position:relative;
+
+  }
+
+  .electric_image{
+    width:15%;
+    position:relative;
+    right:500px;
+  }
+
+  .prices_image{
+    width:15%;
+    position:relative;
+    top:25px;
+    left:500px;
+  }
+
+  .carbon_image{
+    width:20%;
+    position:relative;
+    top:20px;
+    right:450px;
+  }
+
+  .survey_image{
+    width:10%;
+    position:relative;
+    left:500px;
+    top:50px;
+  }
+
+	footer{
+		text-align:center;
+		height: 100px;
+  		margin-top:70px;
+  		font-family: 'Pacifico', cursive;
+	}
+
+.map{
+  top:75px;
+
+}
+
+#title{
+  font-family: 'Quando', serif;
+  position:relative;
+  top:50px;
+  color:black;
+}
+
+.footer{
+  height:100px;
+  background-color:#ff6666;
+}
+
+.panel{
+  border-color:black;
+  border-width:2px;
+}
+
+.panel-heading{
+  border-width:4px;
+}
+
+.list-group-item {
+  border-color:black;
+  border-width:2px;
+  width: 40%;
+  font-size: 24px;
+}
+
+#surveyData {
+  margin-left: 200px;
+}
+
+
+@media screen and (max-width:768px){
+.overlay{
+	visibility:hidden;
+}
+
