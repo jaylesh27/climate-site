@@ -88,7 +88,7 @@ module.exports = function(app) {
 
 		db.Survey.findAll({
 			where: {
-				UserId: req.session.passport.user
+				UserId: req.session.passport.user.id
 			}
 		}).then(function(data){
 			    var hbsObject = {
